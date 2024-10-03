@@ -1,9 +1,12 @@
 name: Run Playwright Scraper
 
-# This workflow will run every 10 minutes
 on:
+  # Schedule to run every 10 minutes
   schedule:
-    - cron: "*/5 * * * *"  # This cron expression runs the job every 10 minutes
+    - cron: "*/5 * * * *"  # Runs every 10 minutes
+
+  # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   scrape:
